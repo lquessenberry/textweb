@@ -11,18 +11,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Placeholder for site checks
-        run: |
-          echo "Nightly check started"
-          echo "TODO: Implement URL validation, status checks, and updates to data/sites.json"
-          echo "Consider using curl, a small Python script, or lynx -dump for text extraction tests"
-          date -u +%Y-%m-%d > last_check.txt
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-      - name: Commit if changed (example)
-        if: false  # enable later
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run health checks
+        run: |
+          python scripts/check_sites.py || true
+
+      - name: Generate exports
+        run: |
+          python scripts/generate_exports.py || true
+
+      - name: Commit updates if any
         run: |
           git config user.name "textweb-bot"
-          git config user.email "bot@example.com"
-          git add .
-          git commit -m "Nightly update" || true
-          git push
+          git config user.email "bot@lquessenberry.github.io"
+          git add data/ exports/ last_check.txt || true
+          git diff --staged --quiet || git commit -m "Nightly update: $(date -u +%Y-%m-%d)"
+          git push || true

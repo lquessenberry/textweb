@@ -1,0 +1,28 @@
+# textweb
+
+Text-friendly and classic internet index
+
+=> https://raw.githubusercontent.com/lquessenberry/textweb/main/data/sites.json JSON index
+=> https://github.com/lquessenberry/textweb Source
+
+## Key directories
+=> https://ohmeadhbh.github.io/bobcat/ Bobcat (Lynx)
+=> https://1mb.club/ 1MB Club
+=> https://wiby.me/ Wiby
+=> https://greycoder.com/a-list-of-text-only-new-sites/ Greycoder
+
+## Proxies
+=> https://frogfind.com/ FrogFind
+=> https://www.theoldnet.com/ The Old Net
+=> https://protoweb.org/ Protoweb
+
+## Gemini resources
+=> gemini://geminiprotocol.net/ Gemini Protocol
+=> https://github.com/kr1sp1n/awesome-gemini Awesome Gemini
+=> https://gemcities.com/ Gemcities hosting
+
+## Gopher
+=> gopher://gopher.floodgap.com/ Floodgap
+=> gopher://gopher.quux.org/ Quux
+
+Full list generated in exports/index.gmi

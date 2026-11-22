@@ -1,39 +1,22 @@
 # textweb
 
-Curated, nightly-updated index of text-browser friendly, classic, and low-tech websites.
+Curated, nightly-updated index of text-browser friendly, classic, Gemini, Gopher, and low-tech websites.
 
-**Purpose**: Replenish the extremely fast, capable text-based internet for Lynx, Links, w3m, ELinks, BBS, telnet, Gopher, Gemini, and retro hardware.
+**Purpose**: Replenish the extremely fast, capable text-based internet for Lynx, Links, w3m, ELinks, BBS, telnet, Gopher, Gemini, and retro hardware — including low-bandwidth and local/mesh delivery.
 
-## Goals
-- Machine-readable index (JSON) that any project can consume
-- Human-readable wiki (Markdown)
-- Low-tech exports (plain text lists, Gopher maps, etc.)
-- Nightly health checks and updates
-- Easy contribution and integration
+## Quick links
+- Human wiki: [wiki/sites.md](wiki/sites.md)
+- Machine data: [data/sites.json](data/sites.json) — raw: https://raw.githubusercontent.com/lquessenberry/textweb/main/data/sites.json
+- Static page: [index.html](index.html) (GitHub Pages ready)
+- Exports: [exports/](exports/) (plain text, HTML, Gopher, Gemini)
+- Gemini capsule files: [gemini/](gemini/)
+- Gopher: [gopher/](gopher/)
+- Delivery notes (P2P, ad-hoc WiFi, OLPC-style): [docs/DELIVERY.md](docs/DELIVERY.md)
 
-## Quick Start
-- Browse the human-readable list: [wiki/sites.md](wiki/sites.md)
-- Machine data: [data/sites.json](data/sites.json)
-- Directories & discovery tools are included as first-class entries
-
-## Formats
-- `data/sites.json` — Canonical structured index
-- `wiki/` — Markdown pages suitable for GitHub Wiki or static site generation
-- `exports/` — Plain text, Gopher, and other low-tech formats (generated)
-
-## Nightly Updates
-A GitHub Action will eventually:
-1. Validate URLs
-2. Check HTTP status and basic text-browser friendliness
-3. Update last_checked timestamps
-4. Open PRs or commit updates for dead/changed links
-
-See `.github/workflows/`.
+## Nightly updates
+GitHub Action in `.github/workflows/nightly-check.yml` runs health checks and regenerates exports.
 
 ## Contributing
-PRs welcome. Add sites to `data/sites.json` following the schema, or open an issue.
-
-## Related
-- Bobcat, Greycoder, 1MB Club, Wiby, FrogFind, The Old Net, Protoweb
+Add sites to `data/sites.json` (see `data/SCHEMA.md`). PRs welcome.
 
 MIT License. Help rebuild the fast text web.
