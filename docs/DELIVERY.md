@@ -6,6 +6,7 @@ This index is designed to be delivered over simple protocols and low-bandwidth o
 - Serve the static files (`index.html`, `exports/`, `data/sites.json`) with any HTTP server.
 - GitHub Pages: enable in repo settings (already has `index.html`).
 - Raw JSON: https://raw.githubusercontent.com/lquessenberry/textweb/main/data/sites.json
+- Static API (also served by GitHub Pages once enabled): `/api/v1/sites.json`, `/api/v1/catalog.json`, `/api/v1/status.json`, `/api/v1/snapshots/index.json`
 
 ## Gemini
 - Copy `gemini/` or `exports/index.gmi` to a Gemini server (e.g. Agate, Jetforce, or Gemcities).
@@ -36,10 +37,21 @@ See [docs/IPFS.md](IPFS.md) for full details.
   - Clients can fetch `sites.json` and cache it.
 - Consider tools like `syncthing` for peer sync of the index folder.
 
+## Static JSON API
+Any static file host can serve the versioned API next to the HTML page:
+
+- `/api/v1/sites.json` — curated index
+- `/api/v1/catalog.json` — tiered catalog
+- `/api/v1/status.json` — up/down/unchecked/skipped counts and the last run
+- `/api/v1/snapshots/index.json` — retained daily and monthly snapshots
+- `/data/snapshots/YYYY-MM-DD.json.gz` — compact status snapshot for that day
+
 ## Daily health checks
 The GitHub Action in `.github/workflows/nightly-check.yml` runs every day at 04:00 UTC (and can be triggered manually). It:
-- Checks HTTP sites and updates `last_checked` / `status` in `data/sites.json`
+- Checks HTTP sites and updates `last_checked` / `status` in `data/sites.json` and `data/catalog-250.json`
+- Writes a gzipped snapshot under `data/snapshots/` (last 30 days, plus the latest of each older month)
 - Regenerates the plain-text, HTML, Gopher, and Gemini exports
+- Refreshes `api/v1/`
 
 ## Simple protocol ideas
 - Plain text over HTTP or even netcat.

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lquessenberry/textweb/blob/main/data/schema/snapshot.schema.json",
+  "title": "textweb daily status snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "date",
+    "source",
+    "license",
+    "counts",
+    "checksum",
+    "sites",
+    "catalog"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "generated_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"},
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "source": {"const": "https://github.com/lquessenberry/textweb"},
+    "license": {"const": "MIT"},
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sites", "catalog"],
+      "properties": {
+        "sites": {"$ref": "#/$defs/counts"},
+        "catalog": {"$ref": "#/$defs/counts"}
+      }
+    },
+    "checksum": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "sites": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/row"}
+    },
+    "catalog": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/catalogRow"}
+    }
+  },
+  "$defs": {
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "up", "down", "unchecked", "skipped"],
+      "properties": {
+        "total": {"type": "integer", "minimum": 0},
+        "up": {"type": "integer", "minimum": 0},
+        "down": {"type": "integer", "minimum": 0},
+        "unchecked": {"type": "integer", "minimum": 0},
+        "skipped": {"type": "integer", "minimum": 0}
+      }
+    },
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "status", "health"],
+      "properties": {
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "status": {"enum": ["ok", "down", "unchecked", "skipped"]},
+        "health": {"enum": ["verified", "stale", "broken", "unchecked"]},
+        "last_checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "http_status": {"type": "integer", "minimum": 100, "maximum": 599}
+      }
+    },
+    "catalogRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "status", "health", "tier", "section"],
+      "properties": {
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "status": {"enum": ["ok", "down", "unchecked", "skipped"]},
+        "health": {"enum": ["verified", "stale", "broken", "unchecked"]},
+        "last_checked": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "http_status": {"type": "integer", "minimum": 100, "maximum": 599},
+        "tier": {"type": "integer", "minimum": 1, "maximum": 4},
+        "section": {"type": "string"}
+      }
+    }
+  }
+}

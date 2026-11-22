@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-22T00:55:33Z",
+  "source": "https://github.com/lquessenberry/textweb",
+  "license": "MIT",
+  "last_run": "2026-11-22T00:55:33Z",
+  "counts": {
+    "sites": {
+      "total": 31,
+      "up": 5,
+      "down": 0,
+      "unchecked": 24,
+      "skipped": 2
+    },
+    "catalog": {
+      "total": 95,
+      "up": 0,
+      "down": 0,
+      "unchecked": 95,
+      "skipped": 0
+    }
+  },
+  "checksums": {
+    "sites": "sha256:41d4876b809488b4e43c14c99791bec326f84ece7839c4d9a362d011e61b5aef",
+    "catalog": "sha256:3f8376e40564749d227e1555a0e7541f62b54111176bdb67598b27dd3de704eb"
+  }
+}

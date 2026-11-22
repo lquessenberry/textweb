@@ -1,0 +1,136 @@
+# textweb
+
+schema_version: 1.0.0
+generated_at: 2026-11-22T00:55:33Z
+source: https://github.com/lquessenberry/textweb
+license: MIT
+checksum: sha256:41d4876b809488b4e43c14c99791bec326f84ece7839c4d9a362d011e61b5aef
+counts: total=31 up=5 down=0 unchecked=24 skipped=2
+catalog_checksum: sha256:3f8376e40564749d227e1555a0e7541f62b54111176bdb67598b27dd3de704eb
+catalog_counts: total=95 up=0 down=0 unchecked=95 skipped=0
+
+API: /api/v1/status.json
+
+=> https://ohmeadhbh.github.io/bobcat/ Bobcat
+Catalog of pages that look good in Lynx and EWW
+status: ok  last_checked: 2026-11-22
+
+=> https://greycoder.com/a-list-of-text-only-new-sites/ Greycoder Text-Only News
+Updated list of text-only and minimalist news sites
+status: ok  last_checked: 2026-11-22
+
+=> https://1mb.club/ 1MB Club
+Collection of useful pages under 1MB
+status: ok  last_checked: 2026-11-22
+
+=> https://250kb.club/ 250kb Club
+Even stricter size club for lightweight pages
+status: ok  last_checked: 2026-11-22
+
+=> https://wiby.me/ Wiby
+Search engine for small, personal, and older-style sites
+status: ok  last_checked: 2026-11-22
+
+=> https://frogfind.com/ FrogFind
+Search + proxy that cleans modern pages for vintage computers
+status: unchecked  last_checked: -
+
+=> https://www.theoldnet.com/ The Old Net
+Wayback Machine proxy for old browsers and hardware
+status: unchecked  last_checked: -
+
+=> https://protoweb.org/ Protoweb
+Proxy restoring historical websites for period browsers
+status: unchecked  last_checked: -
+
+=> https://duckduckgo.com/lite/ DuckDuckGo Lite
+Low-complexity search that works well in text browsers
+status: unchecked  last_checked: -
+
+=> https://text.npr.org/ NPR Text
+Excellent text-only version of NPR
+status: unchecked  last_checked: -
+
+=> https://lite.cnn.com/ CNN Lite
+Lightweight CNN headlines
+status: unchecked  last_checked: -
+
+=> https://www.cbc.ca/lite/ CBC Lite
+Canadian Broadcasting Corporation low-bandwidth site
+status: unchecked  last_checked: -
+
+=> https://www.csmonitor.com/layout/set/text/textedition Christian Science Monitor Text
+Text edition of the CSM
+status: unchecked  last_checked: -
+
+=> https://brutalist.report/ Brutalist Report
+Text-oriented aggregated news headlines
+status: unchecked  last_checked: -
+
+=> https://plaintextsports.com/ PlainTextSports
+Minimalist sports news and results
+status: unchecked  last_checked: -
+
+=> https://wttr.in/ wttr.in
+Classic terminal weather service
+status: unchecked  last_checked: -
+
+=> http://textfiles.com/ textfiles.com
+Jason Scott's legendary BBS-era text file archive
+status: unchecked  last_checked: -
+
+=> http://info.cern.ch/hypertext/WWW/TheProject.html First Website
+The world's first website
+status: unchecked  last_checked: -
+
+=> https://www.spacejam.com/1996/ Space Jam 1996
+Preserved 1996 Space Jam promotional site
+status: unchecked  last_checked: -
+
+=> https://news.ycombinator.com/ Hacker News
+Readable in text browsers
+status: unchecked  last_checked: -
+
+=> https://lobste.rs/ Lobsters
+Computing-focused link aggregation
+status: unchecked  last_checked: -
+
+=> https://en.m.wikipedia.org/ Wikipedia Mobile
+Mobile Wikipedia renders reasonably well in text mode
+status: unchecked  last_checked: -
+
+=> https://sdf.org/ SDF.org
+Long-running public access Unix and hosting
+status: unchecked  last_checked: -
+
+=> https://motherfuckingwebsite.com/ Motherfucking Website
+Minimalist HTML manifesto site
+status: unchecked  last_checked: -
+
+=> https://bestmotherfucking.website/ Best Motherfucking Website
+Slightly improved minimalist site
+status: unchecked  last_checked: -
+
+=> https://nocss.club/ nocss.club
+Sites that work without CSS
+status: unchecked  last_checked: -
+
+=> https://github.com/kr1sp1n/awesome-gemini Awesome Gemini
+Collection of Gemini protocol resources
+status: unchecked  last_checked: -
+
+=> https://geminiprotocol.net/ Gemini Protocol
+Official Gemini protocol site
+status: unchecked  last_checked: -
+
+=> gopher://gopher.floodgap.com/ Floodgap Gopher
+Major Gopher gateway and resources
+status: skipped  last_checked: 2026-11-22
+
+=> gopher://gopher.quux.org/ Quux Gopher
+Classic Gopher server
+status: skipped  last_checked: 2026-11-22
+
+=> https://gemcities.com/ Gemcities
+Free Gemini capsule hosting
+status: unchecked  last_checked: -
