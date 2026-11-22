@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate schemas
+        run: python scripts/validate_schema.py
+
+      - name: Dry-run generator
+        run: python scripts/nightly.py --dry-run
+
+      - name: Assemble Pages site
+        run: python scripts/assemble_site.py --out _site
+
+      - name: Check assembled site
+        run: |
+          test -f _site/index.html
+          test -f _site/api/v1/sites.json
+          test -f _site/api/v1/catalog.json
+          test -f _site/api/v1/status.json
+          test -f _site/api/v1/snapshots/index.json
+          test -f _site/exports/sites.txt
+          test -f _site/exports/index.html
+          test -f _site/exports/gophermap
+          test -f _site/exports/index.gmi
+          test -f _site/data/sites.json
+          test -f _site/data/snapshots/index.json

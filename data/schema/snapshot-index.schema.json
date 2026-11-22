@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lquessenberry/textweb/blob/main/data/schema/snapshot-index.schema.json",
+  "title": "textweb snapshot index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source",
+    "license",
+    "retention",
+    "snapshots"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "generated_at": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"},
+    "source": {"const": "https://github.com/lquessenberry/textweb"},
+    "license": {"const": "MIT"},
+    "retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["daily", "monthly"],
+      "properties": {
+        "daily": {"type": "integer", "minimum": 1},
+        "monthly": {"type": "boolean"}
+      }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/entry"}
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "file", "href", "bytes", "sha256", "role", "counts"],
+      "properties": {
+        "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "file": {"type": "string"},
+        "href": {"type": "string"},
+        "bytes": {"type": "integer", "minimum": 0},
+        "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "role": {"enum": ["daily", "monthly"]},
+        "counts": {"type": "object"}
+      }
+    }
+  }
+}
