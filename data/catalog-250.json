@@ -1,0 +1,145 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-11-21",
+  "description": "Starter catalog of ~250 resources for a portable knowledge commons. Favors long-lived, useful, low-media, or machine-readable sources. Tiered for selective mirroring.",
+  "tiers": {
+    "1": "mirror fully (public domain / open / government)",
+    "2": "mirror metadata and excerpts",
+    "3": "links + periodic snapshots",
+    "4": "discover only"
+  },
+  "sections": [
+    {
+      "name": "News, current events, and RSS",
+      "range": "1-50",
+      "resources": [
+        {"name": "NPR Text-Only", "url": "https://text.npr.org", "tier": 1, "tags": ["news", "text-only", "rss"]},
+        {"name": "NPR RSS", "url": "https://feeds.npr.org/1001/rss.xml", "tier": 2, "tags": ["rss", "news"]},
+        {"name": "CNN", "url": "https://www.cnn.com", "tier": 3},
+        {"name": "BBC News", "url": "https://www.bbc.co.uk/news", "tier": 3},
+        {"name": "BBC RSS", "url": "https://feeds.bbci.co.uk/news/rss.xml", "tier": 2},
+        {"name": "Reuters", "url": "https://www.reuters.com", "tier": 3},
+        {"name": "The Guardian", "url": "https://www.theguardian.com", "tier": 3},
+        {"name": "Guardian world RSS", "url": "https://www.theguardian.com/world/rss", "tier": 2},
+        {"name": "Associated Press", "url": "https://apnews.com", "tier": 3},
+        {"name": "Al Jazeera", "url": "https://www.aljazeera.com", "tier": 3},
+        {"name": "Deutsche Welle", "url": "https://www.dw.com", "tier": 3},
+        {"name": "France 24", "url": "https://www.france24.com", "tier": 3},
+        {"name": "CBC", "url": "https://www.cbc.ca", "tier": 3},
+        {"name": "ABC Australia", "url": "https://www.abc.net.au", "tier": 3},
+        {"name": "ScienceDaily", "url": "https://www.sciencedaily.com", "tier": 2},
+        {"name": "Phys.org", "url": "https://phys.org", "tier": 2},
+        {"name": "New Scientist", "url": "https://www.newscientist.com", "tier": 3},
+        {"name": "Nature", "url": "https://www.nature.com", "tier": 3},
+        {"name": "Science", "url": "https://www.science.org", "tier": 3},
+        {"name": "Quanta Magazine", "url": "https://www.quantamagazine.org", "tier": 2},
+        {"name": "NASA News", "url": "https://www.nasa.gov", "tier": 1},
+        {"name": "NOAA", "url": "https://www.noaa.gov", "tier": 1},
+        {"name": "USGS", "url": "https://www.usgs.gov", "tier": 1},
+        {"name": "CDC", "url": "https://www.cdc.gov", "tier": 1},
+        {"name": "WHO", "url": "https://www.who.int", "tier": 1},
+        {"name": "UN News", "url": "https://news.un.org", "tier": 1},
+        {"name": "ReliefWeb", "url": "https://reliefweb.int", "tier": 1},
+        {"name": "The Conversation", "url": "https://theconversation.com", "tier": 2},
+        {"name": "ProPublica", "url": "https://www.propublica.org", "tier": 2},
+        {"name": "OpenSecrets", "url": "https://www.opensecrets.org", "tier": 2},
+        {"name": "GovTrack", "url": "https://www.govtrack.us", "tier": 1},
+        {"name": "Congress.gov", "url": "https://www.congress.gov", "tier": 1},
+        {"name": "Supreme Court", "url": "https://www.supremecourt.gov", "tier": 1},
+        {"name": "Human Rights Watch", "url": "https://www.hrw.org", "tier": 2},
+        {"name": "Amnesty International", "url": "https://www.amnesty.org", "tier": 2}
+      ]
+    },
+    {
+      "name": "News aggregators, archives, and alternative reading",
+      "range": "51-100",
+      "resources": [
+        {"name": "Hacker News", "url": "https://news.ycombinator.com", "tier": 2, "tags": ["tech", "aggregator"]},
+        {"name": "Lobsters", "url": "https://lobste.rs", "tier": 2},
+        {"name": "Metafilter", "url": "https://www.metafilter.com", "tier": 3},
+        {"name": "Techdirt", "url": "https://www.techdirt.com", "tier": 2},
+        {"name": "Hackaday", "url": "https://hackaday.com", "tier": 2},
+        {"name": "Brutalist Report", "url": "https://brutalist.report", "tier": 1, "tags": ["text-only", "news"]},
+        {"name": "Slashdot", "url": "https://slashdot.org", "tier": 3},
+        {"name": "Internet Archive Wayback Machine", "url": "https://web.archive.org", "tier": 1, "tags": ["archive"]},
+        {"name": "Archive.today", "url": "https://archive.today", "tier": 2},
+        {"name": "CNN Lite", "url": "https://lite.cnn.com", "tier": 2, "tags": ["text-only"]},
+        {"name": "RSS Bridge", "url": "https://rss-bridge.github.io", "tier": 1},
+        {"name": "FreshRSS", "url": "https://freshrss.org", "tier": 1},
+        {"name": "Miniflux", "url": "https://miniflux.app", "tier": 1}
+      ]
+    },
+    {
+      "name": "Wikis, encyclopedias, and knowledge bases",
+      "range": "101-140",
+      "resources": [
+        {"name": "Wikipedia", "url": "https://www.wikipedia.org", "tier": 1, "tags": ["wiki", "reference"]},
+        {"name": "Simple English Wikipedia", "url": "https://simple.wikipedia.org", "tier": 1},
+        {"name": "Wikiquote", "url": "https://en.wikiquote.org", "tier": 1},
+        {"name": "Wikisource", "url": "https://en.wikisource.org", "tier": 1},
+        {"name": "Wiktionary", "url": "https://en.wiktionary.org", "tier": 1},
+        {"name": "Wikidata", "url": "https://www.wikidata.org", "tier": 1},
+        {"name": "Kiwix", "url": "https://www.kiwix.org", "tier": 1, "tags": ["offline"]},
+        {"name": "Project Gutenberg", "url": "https://www.gutenberg.org", "tier": 1, "tags": ["books", "public-domain"]},
+        {"name": "Standard Ebooks", "url": "https://standardebooks.org", "tier": 1},
+        {"name": "Internet Archive", "url": "https://archive.org", "tier": 1},
+        {"name": "Open Library", "url": "https://openlibrary.org", "tier": 1},
+        {"name": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov", "tier": 1},
+        {"name": "PubMed Central", "url": "https://www.ncbi.nlm.nih.gov/pmc", "tier": 1},
+        {"name": "DOAJ", "url": "https://doaj.org", "tier": 1},
+        {"name": "OpenStreetMap", "url": "https://www.openstreetmap.org", "tier": 1},
+        {"name": "Semantic Scholar", "url": "https://www.semanticscholar.org", "tier": 2}
+      ]
+    },
+    {
+      "name": "Computing references, standards, and developer documentation",
+      "range": "141-180",
+      "resources": [
+        {"name": "RFC Editor", "url": "https://www.rfc-editor.org", "tier": 1, "tags": ["standards", "rfc"]},
+        {"name": "IETF Datatracker", "url": "https://datatracker.ietf.org", "tier": 1},
+        {"name": "IANA", "url": "https://www.iana.org", "tier": 1},
+        {"name": "W3C", "url": "https://www.w3.org", "tier": 1},
+        {"name": "MDN Web Docs", "url": "https://developer.mozilla.org", "tier": 1},
+        {"name": "Python documentation", "url": "https://docs.python.org", "tier": 1},
+        {"name": "Rust documentation", "url": "https://doc.rust-lang.org", "tier": 1},
+        {"name": "Go documentation", "url": "https://go.dev/doc/", "tier": 1},
+        {"name": "Linux kernel", "url": "https://www.kernel.org", "tier": 1},
+        {"name": "Linux man-pages", "url": "https://man7.org/linux/man-pages/", "tier": 1},
+        {"name": "GNU coreutils manual", "url": "https://www.gnu.org/software/coreutils/manual/coreutils.html", "tier": 1},
+        {"name": "Debian", "url": "https://www.debian.org", "tier": 1},
+        {"name": "Arch Linux", "url": "https://archlinux.org", "tier": 1},
+        {"name": "Software Heritage", "url": "https://www.softwareheritage.org", "tier": 1},
+        {"name": "Git", "url": "https://git-scm.com", "tier": 1}
+      ]
+    },
+    {
+      "name": "Low-bandwidth tools, directories, and searchable services",
+      "range": "181-215",
+      "resources": [
+        {"name": "Wiby", "url": "https://wiby.me", "tier": 1, "tags": ["search", "retro"]},
+        {"name": "Marginalia Search", "url": "https://search.marginalia.nu", "tier": 1},
+        {"name": "DuckDuckGo Lite", "url": "https://lite.duckduckgo.com", "tier": 1},
+        {"name": "SearXNG", "url": "https://searx.be", "tier": 1},
+        {"name": "Hacker News Search", "url": "https://hn.algolia.com", "tier": 2},
+        {"name": "WolframAlpha", "url": "https://www.wolframalpha.com", "tier": 3},
+        {"name": "OneLook", "url": "https://onelook.com", "tier": 2},
+        {"name": "RSSHub", "url": "https://rsshub.app", "tier": 1}
+      ]
+    },
+    {
+      "name": "Specialized references, public-interest resources, and offline-friendly material",
+      "range": "216-250",
+      "resources": [
+        {"name": "The World Factbook", "url": "https://www.cia.gov/the-world-factbook/", "tier": 1},
+        {"name": "World Bank Data", "url": "https://data.worldbank.org", "tier": 1},
+        {"name": "Our World in Data", "url": "https://ourworldindata.org", "tier": 1},
+        {"name": "OpenStreetMap Wiki", "url": "https://wiki.openstreetmap.org", "tier": 1},
+        {"name": "OpenFoodFacts", "url": "https://world.openfoodfacts.org", "tier": 1},
+        {"name": "Humanitarian Data Exchange", "url": "https://data.humdata.org", "tier": 1},
+        {"name": "Global Forest Watch", "url": "https://www.globalforestwatch.org", "tier": 2},
+        {"name": "Atlas Obscura", "url": "https://www.atlasobscura.com", "tier": 3}
+      ]
+    }
+  ],
+  "notes": "Full original list of ~250 items is condensed here with tiers and tags. Expand as needed. Prefer RSS/plain-text/Gemini/Gopher variants when available. Check licensing before full mirroring."
+}
