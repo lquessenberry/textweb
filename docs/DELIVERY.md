@@ -15,6 +15,18 @@ This index is designed to be delivered over simple protocols and low-bandwidth o
 - Serve `gopher/gophermap` or generated `exports/gophermap` with a Gopher server (e.g. Gophernicus, Pygopherd).
 - Lynx supports Gopher natively.
 
+## Yggdrasil mesh
+See [docs/YGGDRASIL.md](YGGDRASIL.md) for full details.
+- End-to-end encrypted IPv6 overlay perfect for ad-hoc / mesh WiFi.
+- Multicast discovery on the same LAN; static peers over Internet or local links.
+- Serve the textweb static files over HTTP on your Yggdrasil address so mesh peers can reach them without the public Internet.
+
+## IPFS
+See [docs/IPFS.md](IPFS.md) for full details.
+- Content-addressed (CID) distribution of the index and exports.
+- Pin the CID so it remains available; retrieve via gateways or local nodes.
+- Works well combined with Yggdrasil or pure local networks.
+
 ## P2P and offline
 - Pin the repo or JSON to IPFS.
 - Share the `exports/` folder via USB, local file share, or simple HTTP on a local network.
@@ -23,6 +35,11 @@ This index is designed to be delivered over simple protocols and low-bandwidth o
   - Serve the static site from a Raspberry Pi or old laptop on the local network.
   - Clients can fetch `sites.json` and cache it.
 - Consider tools like `syncthing` for peer sync of the index folder.
+
+## Daily health checks
+The GitHub Action in `.github/workflows/nightly-check.yml` runs every day at 04:00 UTC (and can be triggered manually). It:
+- Checks HTTP sites and updates `last_checked` / `status` in `data/sites.json`
+- Regenerates the plain-text, HTML, Gopher, and Gemini exports
 
 ## Simple protocol ideas
 - Plain text over HTTP or even netcat.
